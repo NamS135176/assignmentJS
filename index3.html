@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+        .container{
+            width: 980px;
+            margin: auto;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script>
+       let arrayData = [
+    {
+      "id": "81",
+      "name": "dat",
+      "price": "920.00",
+      "image": "http://lorempixel.com/640/480/technics",
+      "description": "Regional Creative Producer"
+    },
+    {
+      "id": "82",
+      "name": "new product",
+      "price": "526.00",
+      "image": "http://lorempixel.com/640/480/abstract",
+      "description": "Central Usability Agent"
+    },
+    {
+      "id": "83",
+      "name": "tesst",
+      "price": "594.00",
+      "image": "http://lorempixel.com/640/480/sports",
+      "description": "Corporate Program Technician"
+    },
+    {
+      "id": "84",
+      "name": "Theem",
+      "price": "14.00",
+      "image": "http://lorempixel.com/640/480/people",
+      "description": "Dynamic Data Designer"
+    },
+    {
+      "id": "85",
+      "name": "Gorgeous Wooden Shirt",
+      "price": "874.00",
+      "image": "http://lorempixel.com/640/480/food",
+      "description": "Senior Operations Designer"
+    },
+    {
+      "id": "86",
+      "name": "Gorgeous Concrete Soap",
+      "price": "652.00",
+      "image": "http://lorempixel.com/640/480/technics",
+      "description": "International Assurance Analyst"
+    },
+    {
+      "id": "87",
+      "name": "Awesome Cotton Bacon",
+      "price": "810.00",
+      "image": "http://lorempixel.com/640/480/food",
+      "description": "National Factors Assistant"
+    },
+    {
+      "id": "88",
+      "name": "Sleek Concrete Table",
+      "price": "333.00",
+      "image": "http://lorempixel.com/640/480/animals",
+      "description": "Internal Accounts Facilitator"
+    },
+    {
+      "id": "89",
+      "name": "Refined Plastic Bacon",
+      "price": "723.00",
+      "image": "http://lorempixel.com/640/480/sports",
+      "description": "Corporate Interactions Orchestrator"
+    },
+    {
+      "id": "90",
+      "name": "Handcrafted Concrete Fish",
+      "price": "709.00",
+      "image": "http://lorempixel.com/640/480/city",
+      "description": "Internal Intranet Technician"
+    },
+    {
+      "id": "91",
+      "name": "Awesome Cotton Fish",
+      "price": "978.00",
+      "image": "http://lorempixel.com/640/480/technics",
+      "description": "Senior Factors Technician"
+    },
+    {
+      "id": "92",
+      "name": "Unbranded Soft Chips",
+      "price": "215.00",
+      "image": "http://lorempixel.com/640/480/food",
+      "description": "Central Solutions Officer"
+    },
+    {
+      "id": "93",
+      "name": "Fantastic Plastic Tuna",
+      "price": "186.00",
+      "image": "http://lorempixel.com/640/480/technics",
+      "description": "Dynamic Mobility Strategist"
+    },
+    {
+      "id": "94",
+      "name": "Small Frozen Shirt",
+      "price": "253.00",
+      "image": "http://lorempixel.com/640/480/people",
+      "description": "National Assurance Administrator"
+    },
+    {
+      "id": "95",
+      "name": "Intelligent Soft Shirt",
+      "price": "67.00",
+      "image": "http://lorempixel.com/640/480/animals",
+      "description": "International Branding Strategist"
+    },
+    {
+      "id": "96",
+      "name": "Fantastic Steel Bike",
+      "price": "985.00",
+      "image": "http://lorempixel.com/640/480/transport",
+      "description": "Senior Metrics Analyst"
+    },
+    {
+      "id": "97",
+      "name": "Gorgeous Fresh Chicken",
+      "price": "903.00",
+      "image": "http://lorempixel.com/640/480/fashion",
+      "description": "Human Usability Engineer"
+    },
+    {
+      "id": "98",
+      "name": "Incredible Wooden Cheese",
+      "price": "604.00",
+      "image": "http://lorempixel.com/640/480/business",
+      "description": "Global Factors Liaison"
+    },
+    {
+      "id": "99",
+      "name": "Fantastic Soft Towels",
+      "price": "623.00",
+      "image": "http://lorempixel.com/640/480/fashion",
+      "description": "Future Markets Liaison"
+    },
+    {
+      "id": "100",
+      "name": "Ergonomic Fresh Gloves",
+      "price": "409.00",
+      "image": "http://lorempixel.com/640/480/city",
+      "description": "National Assurance Specialist"
+    }
+  ]
+  let id = localStorage.getItem('id');
+  console.log(id);
+  
+  let obj;
+ obj = arrayData.find(item => item.id == id);
+ console.log(obj);
+ document.querySelector('img').src = obj.image
+ document.querySelector('.card-title').innerHTML = `${obj.name}`
+ document.querySelector('.card-text').innerHTML = `${obj.description}`
+ document.querySelectorAll('.list-group-item')[0].innerHTML = `${obj.id}`
+ document.querySelectorAll('.list-group-item')[1].innerHTML = `${obj.price}`
+        </script>
+</body>
+
+</html>

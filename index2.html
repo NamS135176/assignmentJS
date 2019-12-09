@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 980px;
+            margin: auto;
+            background: #f1f1f1;
+        }
+
+        .products-item {
+            border: 2px solid #e7c7dc;
+            text-align: center;
+            /* border-radius:20px; */
+            padding: 10px 15px 30px 15px;
+            position: relative;
+        }
+
+        h4 a {
+            text-decoration: none;
+            color: #363535;
+            font-family: tahoma;
+            font-size: 19px;
+            font-weight: normal;
+        }
+
+        h4 {
+            margin: 33px 0;
+        }
+
+        .products-price span {
+            display: block;
+        }
+
+        .new-price {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 25px;
+            color: #b85797;
+            font-family: tahoma;
+        }
+
+        .status-sale {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div>
+    <script>
+        let arrayData = JSON.parse(localStorage.getItem('array'));
+        // console.log(arrayData.length)
+        for (let i = 0; i < arrayData.length; i++) {
+            document.querySelectorAll('.content')[i].innerHTML = `<div class="products-item">
+                <span class="status-sale">Sale off</span>
+                <div class="products-img">
+                    <a href="index3.html">
+                        <img src="${arrayData[i].image}" alt="day la anh">
+                    </a>
+                </div>
+                <h4 class="products-item-name">
+                    <a href="index3.html">${arrayData[i].name}</a>
+                </h4>
+                <div class="products-price">
+                    <span class="new-price">${arrayData[i].price}
+                    </span>
+                </div>
+            </div>`
+        }
+        let imgSelect = document.querySelectorAll('.products-img')
+        for (let i = 0; i < arrayData.length; i++) {
+            imgSelect[i].addEventListener('click', function () {
+                localStorage.setItem('id', arrayData[i].id)
+            })
+        }
+        for (let i = 0; i < arrayData.length; i++) {
+            imgSelect[i].nextElementSibling.addEventListener('click', function () {
+                localStorage.setItem('id', arrayData[i].id)
+            })
+        }
+    </script>
+</body>
+
+</html>
